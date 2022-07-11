@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 
-export default function Home() {
+const Recipes = () => {
   return (
     <Layout>
-      <h1>Home Page</h1>
+      <h1>Recipes Page</h1>
     </Layout>
   );
-}
+};
+
+export default Recipes;

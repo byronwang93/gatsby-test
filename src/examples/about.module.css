@@ -1,0 +1,11 @@
+.page {
+    color: maroon;
+}
+
+.page h1 {
+    color: goldenrod;
+}
+
+.text {
+    text-transform: uppercase;
+}
