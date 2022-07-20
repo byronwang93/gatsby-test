@@ -31,5 +31,21 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
+
+    // can have multiple instances of the code below
+    {
+      resolve: `gatsby-source-filesystem`, //name of plugin
+      options: {
+        name: `images`, //your name for the resource you're using (can be anything)
+        path: `${__dirname}/src/assets/images`, //path you provide
+      }, // __dirname sets up absolute directory to where file is sitting
+    }, // we can only query into images directory
+    {
+      resolve: `gatsby-source-filesystem`, //name of plugin
+      options: {
+        name: `styles`, // official name in graphql is the source instance name
+        path: `${__dirname}/src/assets/css`, // can be /src to get entire project
+      }, // not recommended bc you'd have to jump through files
+    }, //   every time if you wanted to access one resource
   ],
 };
