@@ -1,32 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import Gallery from '../examples/Gallery';
 const Testing = (props) => {
   console.log(props);
   return (
-    <div>
-      <h2>testing</h2>
-    </div>
+    <Layout>
+      <main className="page">
+        <Gallery />
+      </main>
+    </Layout>
   );
 };
 
-export const data = graphql`
-  query FirstQuery {
-    site {
-      info: siteMetadata {
-        author
-        description
-        simpleData
-        title
-        complexData {
-          age
-          name
-        }
-        person {
-          age
-          name
-        }
-      }
-    }
-  }
-`;
 export default Testing;
